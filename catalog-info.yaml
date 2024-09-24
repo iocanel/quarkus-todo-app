@@ -28,16 +28,17 @@ spec:
   type: service
   lifecycle: production
   owner: user:guest
-  providesApis: [quarkus-todo-app-api]
+  providesApis: 
+  - quarkus-todo-app-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: quarkus-todo-app-api
-  description: A cool quarkus app
+  description: A Todo App API
 spec:
   type: openapi
   lifecycle: production
   owner: user:guest
   definition: 
-    $text: openapi.yaml
+    $text: ./openapi.yaml
